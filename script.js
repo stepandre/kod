@@ -2,15 +2,31 @@ var money = +prompt ('Какой ваш бюджет на месяц?', '60000')
 var name = prompt ('Название вашего магазина?');
 
 mainList = {
-	money,
-	name,
-	open,
-    shopGoods: [product,product2,product3],
+	budget: money,
+	shop: name,
+	open: false,
+    shopGoods: [],
 	employers: {}
 };
 
-var product = prompt('Какой тип товаров будем продавать?');
-var product2 = prompt('Какой тип товаров будем продавать?');
-var product3 = prompt('Какой тип товаров будем продавать?');
+for (let i = 0; i < 1; i++){
+	let a = prompt ('Какой тип товаров будем продавать?')
+	if ((typeof(a)) === 'string' && (typeof(a)) === null && a != '' && a.length < 50) {
+		console.log ('Всё верно!')
+		mainList.shopGoods[i] = a;
+	}
+};
 
-prompt ('Бюджет на 1 день', money / 30);
+let product = prompt ('Какой тип товаров будем продавать?');
+let whi = 0
+
+while (whi < 1){
+	prompt ('Какой тип товаров будем продавать?', product);
+	whi++;
+};
+
+prompt ('Бюджет на 1 день', mainList.budget / 30);
+
+
+
+
