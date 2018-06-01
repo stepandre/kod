@@ -37,7 +37,6 @@ let mainList = {
     shopGoods: [],
 	employers: {},
 	discount: false,
-	employers: {}
 }
 
 if (mainList.discont == true) { //80% от price, если discont = true
@@ -58,15 +57,16 @@ for (let i = 0; i < 3; i++){
 shopGoods()
 
 function employers() { //сотрудники 
-    let mans = 0
-    while (mans < 4) {
-    	prompt ('Ваше имя')
-    	mans ++
-    }
+	let num = 1
+for (let mens = 0; mens < 4; mens++){
+	let mens1 = prompt ('Ваше имя', num++)
+	if ((typeof(mens1)) === 'string' && (typeof(mens1)) === null && mens1 != '' && mens1.length < 50) {
+		mainList.employers[mens] = mens1;
+	}
+};
 };
 
 employers();
-
 
 
 
